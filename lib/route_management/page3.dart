@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_getx/page3.dart';
+import 'package:flutter_getx/route_management/page1.dart';
 import 'package:get/get.dart';
 
-class Page2 extends StatelessWidget {
-  final String? data;
-
-  Page2({this.data});
+class Page3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Page 2'),
+        title: Text('Page 3'),
         titleSpacing: 0,
         leading: IconButton(
           onPressed: () {
@@ -23,21 +20,11 @@ class Page2 extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(data ?? 'No Data'),
-            SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
-                Get.back(result: 'Hello From Page 2');
+                Get.offAll(Page1());
               },
-              child: Text('Back With Data'),
-            ),
-            SizedBox(height: 16),
-            ElevatedButton(
-              onPressed: () {
-                // Get.to(Page3());
-                Get.toNamed('/three');
-              },
-              child: Text('To Page 3'),
+              child: Text('Replace All to Page 1'),
             ),
           ],
         ),

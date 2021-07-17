@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_getx/page2.dart';
+import 'package:flutter_getx/route_management/page2.dart';
 import 'package:get/get.dart';
 
 class Page1 extends StatelessWidget {
@@ -15,8 +15,8 @@ class Page1 extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                // Get.to(Page2())?.then((value) => print(value ?? 'No Result'));
-                Get.toNamed('/two');
+                Get.to(Page2())?.then((value) => print(value ?? 'No Result'));
+                // Get.toNamed('/two');
               },
               child: Text('To Page 2'),
             ),
